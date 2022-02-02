@@ -8,8 +8,7 @@ import org.testng.annotations.BeforeMethod;
 public class CommonConditions {
 
     protected WebDriver driver;
-    protected static final String USER_NAME = "AutoTestUser9";
-    protected static final String PASSWORD = "Te13579@";
+
 
     @BeforeMethod()
     public void setUp() {

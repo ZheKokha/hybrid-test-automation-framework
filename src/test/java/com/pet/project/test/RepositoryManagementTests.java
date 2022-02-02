@@ -1,6 +1,8 @@
 package com.pet.project.test;
 
+import com.pet.project.model.User;
 import com.pet.project.page.LoginPage;
+import com.pet.project.service.UserCreator;
 import org.testng.annotations.Test;
 
 import java.util.Random;
@@ -18,12 +20,12 @@ public class RepositoryManagementTests extends CommonConditions{
     private static Random random = new Random();
 
     @Test(description = "create new repository")
-    public void oneCanCreateProject()
-    {
+    public void oneCanCreateProject() {
+        User testUser = UserCreator.withCredentialsFromProperty();
         String expectedRepositoryName = generateRandomRepositoryNameWithPostfixLength(REPOSITORY_NAME_POSTFIX_LENGTH);
         String createdRepositoryName = new LoginPage(driver)
                 .openPage()
-                .login(USER_NAME, PASSWORD)
+                .login(testUser)
                 .invokeNewRepositoryCreation()
                 .createNewRepository(expectedRepositoryName, REPOSITORY_DESCRIPTION)
                 .getCurrentRepositoryName();
@@ -32,12 +34,12 @@ public class RepositoryManagementTests extends CommonConditions{
     }
 
     @Test(description = "check if repository is empty")
-    public void newProjectsAreEmpty()
-    {
+    public void newProjectsAreEmpty() {
+        User testUser = UserCreator.withCredentialsFromProperty();
         String testRepositoryName = generateRandomRepositoryNameWithPostfixLength(REPOSITORY_NAME_POSTFIX_LENGTH);
         boolean isCurrentRepositoryEmpty = new LoginPage(driver)
                 .openPage()
-                .login(USER_NAME, PASSWORD)
+                .login(testUser)
                 .invokeNewRepositoryCreation()
                 .createNewRepository(testRepositoryName, REPOSITORY_DESCRIPTION)
                 .isCurrentRepositoryEmpty();
