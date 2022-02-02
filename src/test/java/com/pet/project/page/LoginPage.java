@@ -1,5 +1,6 @@
 package com.pet.project.page;
 
+import com.pet.project.model.User;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -29,9 +30,9 @@ public class LoginPage extends AbstractPage{
         PageFactory.initElements(this.driver, this);
     }
 
-    public MainPage login(String login, String password) {
-        inputLogin.sendKeys(login);
-        inputPassword.sendKeys(password);
+    public MainPage login(User user) {
+        inputLogin.sendKeys(user.getUsername());
+        inputPassword.sendKeys(user.getPassword());
         buttonSubmit.click();
         return new MainPage(driver);
     }
