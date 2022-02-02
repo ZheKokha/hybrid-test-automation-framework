@@ -1,5 +1,6 @@
 package com.pet.project.driver;
 
+import com.pet.project.service.PropertiesReader;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -13,8 +14,7 @@ public class DriverManager {
 
     public static WebDriver getDriver(){
         if (null == driver){
-            System.setProperty("browser", "chrome");
-            switch (System.getProperty("browser")){
+            switch (PropertiesReader.getTestData("browser")){
                 case "firefox": {
                     WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver();

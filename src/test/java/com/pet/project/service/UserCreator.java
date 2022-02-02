@@ -4,8 +4,8 @@ import com.pet.project.model.User;
 
 public class UserCreator {
 
-    protected static final String USER_NAME = "AutoTestUser9";
-    protected static final String PASSWORD = "Te13579@";
+    protected static final String USER_NAME = PropertiesReader.getTestData("testdata.user.name");
+    protected static final String PASSWORD = PropertiesReader.getTestData("testdata.user.password");
 
     public static User withCredentialsFromProperty() {
         return new User(USER_NAME, PASSWORD);
