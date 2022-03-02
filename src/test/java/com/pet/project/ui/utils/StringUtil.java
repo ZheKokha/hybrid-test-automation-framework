@@ -1,4 +1,4 @@
-package com.pet.project.utils;
+package com.pet.project.ui.utils;
 
 import java.util.Random;
 

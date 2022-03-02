@@ -1,6 +1,6 @@
-package com.pet.project.driver;
+package com.pet.project.ui.driver;
 
-import com.pet.project.service.PropertiesReader;
+import com.pet.project.ui.service.PropertiesReader;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

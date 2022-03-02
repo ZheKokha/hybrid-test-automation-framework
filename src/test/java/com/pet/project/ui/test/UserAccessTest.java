@@ -1,8 +1,8 @@
-package com.pet.project.test;
+package com.pet.project.ui.test;
 
-import com.pet.project.model.User;
-import com.pet.project.page.LoginPage;
-import com.pet.project.service.UserCreator;
+import com.pet.project.ui.model.User;
+import com.pet.project.ui.page.LoginPage;
+import com.pet.project.ui.service.UserCreator;
 import org.testng.annotations.Test;
 
 import static org.hamcrest.MatcherAssert.assertThat;

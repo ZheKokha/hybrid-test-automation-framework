@@ -1,6 +1,6 @@
-package com.pet.project.page;
+package com.pet.project.ui.page;
 
-import com.pet.project.model.User;
+import com.pet.project.ui.model.User;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

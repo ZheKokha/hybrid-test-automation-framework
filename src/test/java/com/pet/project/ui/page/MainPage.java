@@ -1,4 +1,4 @@
-package com.pet.project.page;
+package com.pet.project.ui.page;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

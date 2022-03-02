@@ -1,4 +1,4 @@
-package com.pet.project.model;
+package com.pet.project.ui.model;
 
 public class User {
 

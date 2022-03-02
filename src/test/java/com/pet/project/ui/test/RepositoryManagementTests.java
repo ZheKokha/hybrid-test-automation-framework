@@ -1,13 +1,11 @@
-package com.pet.project.test;
+package com.pet.project.ui.test;
 
-import com.pet.project.model.User;
-import com.pet.project.page.LoginPage;
-import com.pet.project.service.UserCreator;
+import com.pet.project.ui.model.User;
+import com.pet.project.ui.page.LoginPage;
+import com.pet.project.ui.service.UserCreator;
+import com.pet.project.ui.utils.StringUtil;
 import org.testng.annotations.Test;
 
-import java.util.Random;
-
-import static com.pet.project.utils.StringUtil.generateRandomRepositoryNameWithPostfixLength;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.is;
@@ -22,7 +20,7 @@ public class RepositoryManagementTests extends CommonConditions{
     @Test(description = "create new repository")
     public void oneCanCreateProject() {
         User testUser = UserCreator.withCredentialsFromProperty();
-        String expectedRepositoryName = generateRandomRepositoryNameWithPostfixLength(REPOSITORY_NAME_POSTFIX_LENGTH);
+        String expectedRepositoryName = StringUtil.generateRandomRepositoryNameWithPostfixLength(REPOSITORY_NAME_POSTFIX_LENGTH);
         String createdRepositoryName = new LoginPage(driver)
                 .openPage()
                 .login(testUser)
@@ -36,7 +34,7 @@ public class RepositoryManagementTests extends CommonConditions{
     @Test(description = "check if repository is empty")
     public void newProjectsAreEmpty() {
         User testUser = UserCreator.withCredentialsFromProperty();
-        String testRepositoryName = generateRandomRepositoryNameWithPostfixLength(REPOSITORY_NAME_POSTFIX_LENGTH);
+        String testRepositoryName = StringUtil.generateRandomRepositoryNameWithPostfixLength(REPOSITORY_NAME_POSTFIX_LENGTH);
         boolean isCurrentRepositoryEmpty = new LoginPage(driver)
                 .openPage()
                 .login(testUser)

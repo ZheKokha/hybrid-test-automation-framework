@@ -1,6 +1,6 @@
-package com.pet.project.test;
+package com.pet.project.ui.test;
 
-import com.pet.project.driver.DriverManager;
+import com.pet.project.ui.driver.DriverManager;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;

@@ -1,6 +1,6 @@
-package com.pet.project.utils;
+package com.pet.project.ui.utils;
 
-import com.pet.project.driver.DriverManager;
+import com.pet.project.ui.driver.DriverManager;
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
