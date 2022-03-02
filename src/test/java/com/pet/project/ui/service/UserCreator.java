@@ -1,6 +1,6 @@
-package com.pet.project.service;
+package com.pet.project.ui.service;
 
-import com.pet.project.model.User;
+import com.pet.project.ui.model.User;
 
 public class UserCreator {
 

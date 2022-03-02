@@ -1,4 +1,4 @@
-package com.pet.project.service;
+package com.pet.project.ui.service;
 
 import java.util.ResourceBundle;
 
