@@ -11,10 +11,10 @@ import java.util.List;
 @AllArgsConstructor
 public class PetInfoFull {
 
-    public int id;
-    public CategoryPojo category;
-    public String name;
-    public List<String> photoUrls;
-    public ArrayList<TagPojo> tags;
-    public String status;
+    private int id;
+    private CategoryPojo category;
+    private String name;
+    private List<String> photoUrls;
+    private ArrayList<TagPojo> tags;
+    private String status;
 }

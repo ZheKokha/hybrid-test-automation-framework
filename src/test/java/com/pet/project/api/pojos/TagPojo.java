@@ -11,6 +11,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class TagPojo {
 
-    public int id;
-    public String name;
+    private int id;
+    private String name;
 }
