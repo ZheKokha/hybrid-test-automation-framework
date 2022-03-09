@@ -5,8 +5,8 @@ import lombok.Data;
 @Data
 public class DeleteResponse {
 
-    public int code;
-    public String type;
-    public String message;
+    private int code;
+    private String type;
+    private String message;
 
 }
